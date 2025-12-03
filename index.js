@@ -1,7 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 import readlineSync from "readline-sync"
 import { text } from "stream/consumers";
-const ai = new GoogleGenAI({ apiKey: "AIzaSyAo60fd7QpCFDV2HlAree7BeQ4v9ixbO8c" });
+import dotenv from 'dotenv'
+dotenv.config()
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const History = []
 
